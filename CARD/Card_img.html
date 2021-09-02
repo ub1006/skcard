@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sk매직 주요 카드혜택</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href="js/video-js.css" rel="stylesheet" />
+<link href="../css/mviews.css" rel="stylesheet" />
+<script src="js/video.js"></script>
+
+<script
+src="https://code.jquery.com/jquery-1.12.4.min.js"
+integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+crossorigin="anonymous"></script>
+
+
+ 
+</head>
+<body>
+    <script src="js/jquery.min.js"></script>
+
+	
+		
+    <div class="body_part"  id = "Fimg" style="top:0;">
+        <img src = "http://www.sktcallcenter.com/MTOPKIS/loading.png" width="100%">
+    </div>
+
+	 
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("#playBtn").on("click", function() {
+            $("#myVideo").trigger("play");
+        });
+    });
+
+    $(document).ready(function() {
+        $("#stopBtn").on("click", function() {
+            $("#myVideo").trigger("pause");
+        });
+    });
+
+    $(document).ready(function() {
+        $("#fullBtn").on("click", function() {
+            var elem = document.getElementById("myVideo");
+            if(elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if(elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        });
+    });        
+
+        // 파리미터 받아오기
+        function getUrlParams() {
+		var params = {};
+		window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+		return params;
+	} 
+		 window.onload = function() {
+			TDS_Paramiter = getUrlParams();
+			
+			         //이미지
+            document.getElementById("Fimg").innerHTML = '<div id = "Fimg"><img src = "http://www.sktcallcenter.com/MTOPKIS_Subscribe/CARD/'+TDS_Paramiter.Fimg+'" width="100%"></div>';
+
+
+            //영상파일
+			// document.getElementById("Fid").innerHTML = '<video id="myVideo" oncontextmenu="return false;" width="100%"><source src="http://www.sktconsulting.co.kr/MTOPKIS/'+TDS_Paramiter.Fid +'" type="video/mp4">';
+
+			// //선택한 휴대폰명
+			// document.getElementById("Apn").innerHTML = decodeURI(TDS_Paramiter.Apn).replace('%2', '');
+
+			// if (TDS_Paramiter.Aj ==0)  
+
+            // 	{ $('#trNo1_1').hide(); }
+
+		 }
+</script>
+</html>

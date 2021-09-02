@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kNnet</title>
+  <style type="text/css">    
+    html, body {height:100%; margin:0; font-family:'맑은 고딕', Arial sans-serif}
+    .login-wrap {      
+      padding-left:500px;
+    }
+    .red {
+      color:#ea052f;
+    }
+    .login-left{
+      background:url(./images/login_bg.jpg) no-repeat left bottom #e1e2e5;
+      width:500px;
+      padding:70px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items:center; 
+      position:fixed;
+      bottom:0;
+      top:0;
+      left:0;
+      box-sizing: border-box;
+      z-index:1;
+      background-size:contain;
+    }
+    .login-welcome > img {
+      float:left;
+      margin-right:20px;
+    }
+    .login-welcome h4 {
+      font-size:22px;
+      margin:0;
+      letter-spacing:-1px;
+      margin-top:2px;
+    }
+    .login-welcome p {
+      font-size:14px;
+      letter-spacing:-1px;
+      line-height:1.5;
+      margin:8px 0 0;
+      color:#666666;
+    }
+    .login-right { 
+      position:absolute;
+      left:500px;
+      top:0;
+      bottom:0;
+      right:0;
+      background-color:#e1e2e5;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom:20px; 
+    }
+    .login-box {
+      width:400px;
+      height:420px;
+    }
+    .login-input {
+      margin-top:20px;
+    }
+    .login-input input {
+      margin-bottom: 10px;
+    }
+    .login-input input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      height: 50px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555555;
+      background-color: #ffffff;
+      background-image: none;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+    .login-input input:focus {
+      border-color: #ea052f;
+      outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 102, 102, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233, 102, 102, 0.6);
+    }
+    .login-input input::-moz-placeholder {
+      color: #999999;
+      opacity: 1;
+    }
+    .login-input input:-ms-input-placeholder {
+      color: #999999;
+    }
+    .login-input input::-webkit-input-placeholder {
+      color: #999999;
+    }
+    .login-input input[type="submit"] {
+      background-color:#ee0233; color:#ffffff; font-size:1.1em; font-weight:700; text-shadow:0 0 1px rgba(0,0,0,0.5); cursor: pointer; margin-bottom:20px; margin-top:14px;height:54px;
+    }
+    .login-input input[type="submit"]:focus, .login-input input[type="submit"]:hover{
+      background-color:#ff0a3b; border: 1px solid rgba(0,0,0,0.2);
+    }
+    .btn-find {
+      color:#252525; text-decoration: none; font-size:14px; letter-spacing:-0.4px; opacity:0.6; font-weight:700; vertical-align: middle; vertical-align:top; line-height:22px;
+    }
+    .btn-find:hover {
+      opacity:0.9;
+    }
+    .btn-find i{
+      display:inline-block;
+      background:url(images/icon_findID.png) center no-repeat;
+      width:22px; height:22px; vertical-align: bottom; margin-right:2px; margin-top:1px;
+    }
+    .login-corporate {
+      text-align:center; margin-top:45px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-wrap">
+  <div class="login-left">    
+  </div>
+  <div class="login-right">
+    <div class="login-box">
+      <div class="login-welcome">
+        <img src="./images/logo_knet.png" alt="knet로고">
+        <h4>K net <span class="red">로그인</span></h4>
+        <p>서비스탑 소통공간, K net에 오신 것을 환영합니다.<br/>로그인 후 이용하실 수 있습니다.</p>
+      </div>
+      <div class="login-input">
+        <input type="text" placeholder="아이디" id="txt_Id" />
+        <input type="password" placeholder="비밀번호" id="txt_Pwd"/>
+        <input type="submit" name="Common_Page1$ctl14$ibtLogin" id="Common_Page1_ctl14_ibtLogin" tabindex="191" onclick="return self_page_isLogin();" value="로그인">
+        <a href="" class="btn-find"><i></i> 아이디/비밀번호 찾기</a>
+      </div>
+      <div class="login-corporate">
+        <img src="./images/login_logo_servicetop.png" alt="서비스탑">
+      </div>
+    </div> 
+  </div> 
+  </div>
+</body>
+</html>
